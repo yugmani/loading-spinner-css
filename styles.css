@@ -1,0 +1,27 @@
+html {
+  --stroke-width: 6px;
+  --size: 64px;
+  --duration: 1s;
+}
+
+body {
+  background-color: #eab308;
+}
+
+.spinner {
+  border: var(--stroke-width) solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  border-top-color: rgba(0, 0, 0, 0.5);
+  animation: rotate calc(var(--duration)) linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
